@@ -1,0 +1,43 @@
+﻿<Window x:Class="NbaApi.Views.TeamInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NbaApi.Views"
+        mc:Ignorable="d"
+        Title="TeamInfoWindow" Height="450" Width="800">
+
+    <StackPanel>
+
+        <Image Source="{Binding Team.logo}"
+               Width="250"
+               Height="200"></Image>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,3">
+            <TextBlock Text="Id : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Team.id}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"  Margin="0,3">
+            <TextBlock Text="Name : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Team.name}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,3">
+            <TextBlock Text="Nickname : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Team.nickname}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,3">
+            <TextBlock Text="Code : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Team.code}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,3">
+            <TextBlock Text="City : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Team.city}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+    </StackPanel>
+</Window>

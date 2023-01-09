@@ -1,0 +1,57 @@
+﻿<Window x:Class="NbaApi.Views.PlayerInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NbaApi.Views"
+        mc:Ignorable="d"
+        Title="PlayerInfoWindow" Height="450" Width="800">
+
+
+
+    <StackPanel>
+        <Image Source="{Binding Logo}"
+               Width="250"
+               Height="200"></Image>
+
+        <StackPanel Orientation="Horizontal"
+                    
+                    Margin="0,3">
+            <TextBlock Text="Id : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Player.id}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"  Margin="0,3">
+            <TextBlock Text="Firstname : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Player.firstname}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,3">
+            <TextBlock Text="Lastname : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Player.lastname}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,3">
+            <TextBlock Text="Nba Start : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Player.nba.start}" Width="600" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,3">
+            <TextBlock Text="Experience : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Player.nba.pro}" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text=" years" Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,3">
+            <TextBlock Text="Height : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Player.height.meters}" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text=" metr" Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,3">
+            <TextBlock Text="Weight : " Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="{Binding Player.weight.kilograms}" FontSize="19" FontWeight="Bold"></TextBlock>
+            <TextBlock Text=" kg" Width="150" FontSize="19" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+    </StackPanel>
+</Window>
